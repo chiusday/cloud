@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: file://${user.home}/git/cloud/config-server/src/main/resources/config-repo
+  
+server:
+   port: 40001
+   servlet:
+     context-path: /config-server
+     
