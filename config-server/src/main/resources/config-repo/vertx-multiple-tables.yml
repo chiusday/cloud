@@ -1,6 +1,8 @@
 spring:
   application:
     name: vertx-multiple-tables
+
+hasher.ribbon.listOfServers: http://localhost:31012,http://localhost:31112
   
 app-config :
   port : 30011

@@ -3,7 +3,6 @@ spring:
     name: hasher
     
 server:
-  port: 30012
   servlet:
     context-path: /hasher
     

@@ -1,6 +1,12 @@
 spring:
   application:
     name: vertx-multiple-tables
+
+hasher.ribbon.listOfServers: http://localhost:31012,http://localhost:31112
+
+logging:
+  level:
+    com.netflix: debug
   
 app-config :
   port : 31011

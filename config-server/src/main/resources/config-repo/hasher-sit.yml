@@ -1,9 +1,12 @@
 spring:
   application:
     name: hasher
+
+logging:
+  level:
+    com.netflix: debug
     
 server:
-  port: 31012
   servlet:
     context-path: /hasher
     
