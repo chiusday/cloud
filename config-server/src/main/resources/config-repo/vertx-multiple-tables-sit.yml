@@ -2,12 +2,19 @@ spring:
   application:
     name: vertx-multiple-tables
 
-hasher.ribbon.listOfServers: http://localhost:31012,http://localhost:31112
+#hasher:
+#  ribbon:
+#    listOfServers: http://localhost:31012,http://localhost:31112
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:40002/server-naming/eureka
 
 logging:
   level:
     com.netflix: debug
-  
+
 app-config :
   port : 31011
   headerContentType : content-type

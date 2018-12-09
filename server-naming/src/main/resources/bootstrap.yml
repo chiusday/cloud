@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: server-naming
+
+  cloud:
+    config:
+      uri: http://localhost:40001/config-server
+
+  profiles:
+    active: sit
+
+server:
+  servlet:
+    context-path: /server-naming
+

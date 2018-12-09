@@ -2,6 +2,13 @@ spring:
   application:
     name: hasher
     
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:40002/server-naming/eureka
+  instance:
+    preferIpAddress: true
+
 server:
   servlet:
     context-path: /hasher

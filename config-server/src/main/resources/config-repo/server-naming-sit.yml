@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: server-naming
+
+logging:
+  level:
+    com.netflix: debug
+
+server:
+  port: 40002
+  servlet:
+    context-path: /server-naming
+      
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://localhost:40002/server-naming/eureka

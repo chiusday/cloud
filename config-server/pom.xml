@@ -11,14 +11,14 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<!-- <relativePath/>  --><!-- lookup parent from repository -->
 	</parent>
 	
 	<properties>
 		<project.buildSourceEncoding>UTF-8</project.buildSourceEncoding>
 		<project.reportingOutputEncoding>UTF-8</project.reportingOutputEncoding>
 		<java.version>1.8</java.version>
-		<spring-cloud.version>Finchley.SR1</spring-cloud.version>
+		<spring-cloud.version>Finchley.SR2</spring-cloud.version>
 	</properties>
 
 	<dependencies>

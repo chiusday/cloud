@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: server-naming
+    
+server:
+  port: 40002
+  
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
