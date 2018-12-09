@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: zuul-gateway
+    
+server:
+  servlet:
+    port: 4003
+    contextPath: /zuul-gateway
