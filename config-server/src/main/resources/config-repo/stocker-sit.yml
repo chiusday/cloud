@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: stocker
+    
+server:
+  port: 31021
+  servlet:
+    context-path: /stocker
+
+logging:
+  level:
+    org:
+      springframework:
+        web: debug
+        security: debug
+        
+security:
+  oauth2:
+    resource:
+      clientId: stockerClientId
+      clientSecret: secret
+      checkTokenEndPointUrl: http://localhost:6010/oauth2-authorization/oauth/check_token
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:40002/server-naming/eureka
+      
+app-config:
+  sourceUrl: https://www.alphavantage.co/query
+  function: function=TIME_SERIES_DAILY_ADJUSTED
+  symbol: symbol=
+  apiKey: apikey=demo
+  
+returned-data:
+  timeSeries:
+    daily: Time Series (Daily)
+    weekly: Weekly Time Series
+    monthly: Monthly Time Series
+    
+  
