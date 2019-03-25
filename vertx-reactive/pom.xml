@@ -9,6 +9,7 @@
   		<java.version>1.8</java.version>
   		<vertx.version>3.6.2</vertx.version>
   		<samples-common.version>0.0.1</samples-common.version>
+  		<spring-oauth2.version>2.3.3.RELEASE</spring-oauth2.version>
   		<spring-cloud.version>Finchley.SR2</spring-cloud.version>
   	</properties>
   	
@@ -25,9 +26,14 @@
   			<version>${samples-common.version}</version>
   		</dependency>
   		<dependency>
+			<groupId>com.security.utilities</groupId>
+			<artifactId>security-common-utilities</artifactId>
+			<version>0.0.1</version>
+  		</dependency>
+  		<dependency>
   			<groupId>com.samples.common</groupId>
   			<artifactId>samples-common-market</artifactId>
-  			<version>0.0.2</version>
+  			<version>${samples-common.version}</version>
   		</dependency>
   		<dependency>
   			<groupId>com.samples.common</groupId>
@@ -42,23 +48,20 @@
   		<dependency>
   			<groupId>org.springframework.boot</groupId>
   			<artifactId>spring-boot-starter-web</artifactId>
-			<!-- 
-  			<exclusions>
-  				<exclusion>
-  					<groupId>org.springframework.boot</groupId>
-  					<artifactId>spring-boot-starter-tomcat</artifactId>
-  				</exclusion>
-  			</exclusions>
-  			 -->
   		</dependency>
   		<dependency>
-  			<groupId>org.springframework.cloud</groupId>
-  			<artifactId>spring-cloud-starter-config</artifactId>
+  			<groupId>org.springframework.security.oauth</groupId>
+  			<artifactId>spring-security-oauth2</artifactId>
+  			<version>${spring-oauth2.version}</version>
   		</dependency>
-  		<dependency>
-  			<groupId>org.springframework.cloud</groupId>
-  			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-  		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+		</dependency>
 
   		<dependency>
   			<groupId>org.springframework.boot</groupId>
@@ -128,7 +131,7 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	
+
 	<build>
 		<plugins>
 			<plugin>

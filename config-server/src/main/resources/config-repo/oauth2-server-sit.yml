@@ -3,7 +3,7 @@ spring:
     name: oauth2-server
 
 server:
-  port: 30031
+  port: 31031
   servlet:
     context-path: /oauth2-authorization
     
@@ -15,3 +15,7 @@ logging:
         web: debug
         security: debug
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:40002/server-naming/eureka

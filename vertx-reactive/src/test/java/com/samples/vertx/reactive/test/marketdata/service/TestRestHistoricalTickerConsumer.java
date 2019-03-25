@@ -21,12 +21,6 @@ public class TestRestHistoricalTickerConsumer {
 	private RestHistoricalTickerConsumer webConsumer;
 	
 	@Test
-	public void TestGetTickerList() {
-		List<HistoricalTicker> tickers = webConsumer.getTickerList("MSFT");
-		Assert.assertFalse(tickers.isEmpty());
-	}
-	
-	@Test
 	public void TestPostForTickerList() {
 		List<HistoricalTicker> tickers = webConsumer.postForTickerList("MSFT");
 		Assert.assertFalse(tickers.isEmpty());

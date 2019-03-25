@@ -11,8 +11,22 @@ server:
   
 logging:
   level:
+    org:
+      springframework:
+        web: debug
+        security: debug
     com.samples.vertx: debug
-
+    
+security:
+  oauth2:
+    client:
+      clientId: SampleClientId
+      clientSecret: secret
+      accessTokenUri: http://localhost:31031/oauth2-authorization/oauth/token
+      userAuthorizationUri: http://localhost:31031/oauth2-authorization/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:31031/oauth2-authorization/user
+      
 eureka:
   client:
     serviceUrl:
@@ -21,13 +35,14 @@ eureka:
 app-config :
   addressUser: samples.dataAccess.user
   addressMarketInfo: samples.dataAccess.marketInfo
+  hasherUrl: http://localhost:21011/sec-utils/hash
   
 db-config:
   url: jdbc:h2:mem:sample
   driver_class: org.h2.Driver
 
 stocker:
-  url: http://localhost:40401/stocker/stock/list/
+  url: http://localhost:31021/stocker/stock/list
   
 message:
   failed:

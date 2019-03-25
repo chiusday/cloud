@@ -10,6 +10,7 @@ public class AppConfig {
 	private String addressMarketInfo;
 	private String headerContentType;
 	private String headerApplicationJson;
+	private String hasherUrl;
 	
 	public String getAddressUser() {
 		return addressUser;
@@ -34,5 +35,11 @@ public class AppConfig {
 	}
 	public void setHeaderApplicationJson(String headerApplicationJson) {
 		this.headerApplicationJson = headerApplicationJson;
+	}
+	public String getHasherUrl() {
+		return hasherUrl;
+	}
+	public void setHasherUrl(String hasherUrl) {
+		this.hasherUrl = hasherUrl;
 	}
 }

@@ -20,7 +20,7 @@ security:
     resource:
       clientId: ResourceSecurityUtilities
       clientSecret: secret
-      checkTokenEndpointUrl: http://localhost:6010/oauth2-authorization/oauth/check_token
+      checkTokenEndpointUrl: http://localhost:31031/oauth2-authorization/oauth/check_token
 
 eureka:
   client:

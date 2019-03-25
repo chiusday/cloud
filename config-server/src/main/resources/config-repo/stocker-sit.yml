@@ -19,7 +19,7 @@ security:
     resource:
       clientId: stockerClientId
       clientSecret: secret
-      checkTokenEndPointUrl: http://localhost:6010/oauth2-authorization/oauth/check_token
+      checkTokenEndPointUrl: http://localhost:31031/oauth2-authorization/oauth/check_token
 
 eureka:
   client:
