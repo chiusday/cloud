@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: security-utilities
+
+  cloud:
+    config:
+      uri: http://localhost:40001/config-server
+
+  profiles:
+    active: sit
+
