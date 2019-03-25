@@ -15,3 +15,7 @@ logging:
         web: debug
         security: debug
 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:40002/server-naming/eureka
