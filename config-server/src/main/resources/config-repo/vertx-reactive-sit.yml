@@ -1,4 +1,4 @@
-spring:
+xspring:
   application:
     name: vertx-reactive
   h2:
@@ -42,7 +42,9 @@ db-config:
   driver_class: org.h2.Driver
 
 stocker:
-  url: http://localhost:31021/stocker/stock/list
+  url:
+    historical: http://localhost:31021/stocker/stock/historical/
+    intraday: http://localhost:31021/stocker/stock/intraday/
   
 message:
   failed:

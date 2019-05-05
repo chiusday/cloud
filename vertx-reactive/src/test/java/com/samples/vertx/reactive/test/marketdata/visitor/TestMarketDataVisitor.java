@@ -9,9 +9,9 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 
 import com.samples.market.model.HistoricalTicker;
 import com.samples.vertx.enums.DBOperations;
@@ -32,8 +32,9 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.reactivex.core.eventbus.EventBus;
 import io.vertx.reactivex.core.eventbus.Message;
 
+@SpringBootTest
+@WebAppConfiguration
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment=WebEnvironment.RANDOM_PORT)
 public class TestMarketDataVisitor {
 	@Autowired
 	private MarketDataAddResponseVisitor<HistoricalTicker> historicalTickerAddRxResponseVisitor;
